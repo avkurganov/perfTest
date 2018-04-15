@@ -1,10 +1,6 @@
 import java.util.Date;
 
-/**
- * @author conandk on 4/10/18
- * @project esi
- * @className ${CLASS_NAME}
- */
+
  class Investor {
 
   private Date updatedAt;
