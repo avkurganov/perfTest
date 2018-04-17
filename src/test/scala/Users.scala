@@ -1,4 +1,5 @@
 
+import Requests._
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
@@ -49,15 +50,7 @@ class Users extends Simulation {
       session
     })
 
-  before {
-    println("Simulation is about to start!")
-    setUp(runCreateUsers.inject(constantUsersPerSec(3) during (1 seconds)).protocols(httpConf))
-  }
-
-  after {
-    println("Simulation is finished!")
-    println(list)
-  }
+  setUp(runCreateUsers.inject(constantUsersPerSec(3) during (1 seconds)).protocols(httpConf))
 
 
 }
